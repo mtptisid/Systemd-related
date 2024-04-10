@@ -1,5 +1,5 @@
 ---
-# handlers file for add_cagip_prod_systemd_service
+# handlers file for service
 - name: Reload systemd
   systemd:
     daemon_reload: yes
