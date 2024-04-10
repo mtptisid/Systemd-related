@@ -71,12 +71,12 @@
 # - the service is configured with the "User" directive and does match a mid service account
 # - the service name does match the regex defined for mid service
 # Note: The technical account (i.e defined with the var User=) is the only account configured to run sudo cmd on the systemctl service
-- name: Add sudo rights for technical account if allowed
-  include_tasks: add_systemctl_sudo_rights.yml
-  when:
-    #- build_user | lower in sudo_allowed_users.keys()
-    - User is defined and User | regex_search('^(httpd|jboss|php|tomcat|was|wildfly)c\d{3}')
-    - ServiceName is defined and ServiceName | regex_search('^slc\d{3}\S{2}[porhqid][\w]+')
+#- name: Add sudo rights for technical account if allowed
+#  include_tasks: add_systemctl_sudo_rights.yml
+# when:
+ #   #- build_user | lower in sudo_allowed_users.keys()
+ #   - User is defined and User | regex_search('^(httpd|jboss|php|tomcat|was|wildfly)c\d{3}')
+  #  - ServiceName is defined and ServiceName | regex_search('^slc\d{3}\S{2}[porhqid][\w]+')
 
 
 
