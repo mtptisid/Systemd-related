@@ -22,4 +22,7 @@ Please go through the systemd once before starting
 2. Go to Project section and click on Add button to add new project.
    
 ![Project Creation in AWX](https://github.com/mtptisid/Systemd-related/blob/master/Screenshot%202024-04-10%20171031.png)
-4. 
+
+3. In create new Project page Specify your Project Name and Descriptions with SCM selctions and URL.
+
+![Creating new Project]()
