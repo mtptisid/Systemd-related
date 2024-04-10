@@ -8,9 +8,7 @@
   
 
   tasks:
-    - name: Debug Facts
-      debug:
-        var: ansible_distribution
+
     - name: add hosts from extra-vars
       add_host:
         name: '{{ item }}'
@@ -22,6 +20,9 @@
 - hosts: building
   gather_facts: "{{ play_roles_gather_facts | default(false) | bool }}"
   tasks:
+    - name: Debug Facts
+      debug:
+        var: ansible_distribution
     - debug: msg="hosts_list={{ hosts_list | replace('\n',',') }}"
       run_once: true
       when: play_roles_debug | default(false) | bool
