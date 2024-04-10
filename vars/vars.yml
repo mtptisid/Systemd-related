@@ -1,5 +1,5 @@
 ---
-# vars file for add_cagip_prod_systemd_service
+# vars file for job
 do_start: "{% if trigger is defined and trigger != '' %}{{ trigger }}{% else %}yes{% endif %}"
 allowed_types:
   - simple
