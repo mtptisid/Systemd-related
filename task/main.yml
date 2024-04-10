@@ -3,7 +3,7 @@
 #
 
 - name: Call linux conf if the host is linux
-  include_tasks: linuxtask.yml
+  include_tasks: linux.yml
   when: ansible_system == "Linux"
   tags:
     - linux
