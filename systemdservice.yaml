@@ -3,7 +3,7 @@
 
 - hosts: localhost
   connection: local
-  gather_facts: false
+  gather_facts: true
 
   tasks:
     - name: add hosts from extra-vars
