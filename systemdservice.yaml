@@ -2,7 +2,6 @@
 # Playbook to include and launch one or more roles
 
 - hosts: localhost
-  connection: local
   gather_facts: false
 
   tasks:
