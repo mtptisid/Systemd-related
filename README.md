@@ -14,3 +14,11 @@
 
 Please go through the systemd once before starting 
 [Managing Services with systemd](access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system_administrators_guide/chap-managing_services_with_systemd)
+
+
+# Steps to create a projects in Ansible AWX.
+
+1. Open AWX web interface and login with user with role System Administator(admin)
+2. Go to Project section and click on Add button to add new project.
+![Project Creation in AWX]()
+3. 
