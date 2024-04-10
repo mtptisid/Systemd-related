@@ -1,9 +1,8 @@
 galaxy_info:
   author: Siddharamayya
-  description: Inaytsll service
+  description: install service
 
-  min_ansible_version: 2.2
+  #min_ansible_version: 2.2
 
-  #platforms:
 
 dependencies: []
