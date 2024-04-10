@@ -23,6 +23,8 @@ Please go through the systemd once before starting
    
 ![Project Creation in AWX](https://github.com/mtptisid/Systemd-related/blob/master/Screenshot%202024-04-10%20171031.png)
 
-3. In create new Project page Specify your Project Name and Descriptions with SCM selctions and URL.
+3. Create new Project page Specify your Project Name and Descriptions with SCM selctions and URL.
 
-![Creating new Project]()
+![Creating new Project](https://github.com/mtptisid/Systemd-related/blob/master/ProjectCreate.png)
+
+4. Create a new job tempalate on the 
