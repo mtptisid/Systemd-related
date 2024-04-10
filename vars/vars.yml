@@ -5,3 +5,12 @@ allowed_types:
   - simple
   - forking
   - oneshot
+
+  sudo_allowed_users:
+    ec2-user: ec2-user
+    ansawx: ansawx
+
+sudo_user: ansawx
+
+#sudoers_tmp: /tmp/sudoers_tmp
+  
