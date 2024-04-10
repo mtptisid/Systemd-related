@@ -1,0 +1,73 @@
+[Unit]
+{% if Description is defined and Description != '' %}
+Description={{ Description }}
+{% else %}
+Description={{ ServiceName }}
+{% endif %}
+{% if Requires is defined and Requires != '' %}
+Requires={{ Requires }}
+{% endif %}
+{% if Wants is defined and Wants != '' %}
+Wants={{ Wants }}
+{% endif %}
+{% if BindsTo is defined and BindsTo != '' %}
+BindsTo={{ BindsTo }}
+{% endif %}
+{% if Before is defined and Before != '' %}
+Before={{ Before }}
+{% endif %}
+{% if After is defined and After != '' %}
+After={{ After }}
+{% endif %}
+{% if OnFailure is defined and OnFailure != '' %}
+OnFailure={{ OnFailure }}
+{% endif %}
+AssertPathExists=!/etc/noprod
+
+[Service]
+{% if Type is not defined or Type not in allowed_types %}
+{% set Type = 'forking' %}
+{% endif %}
+Type={{ Type }}
+{% if RemainAfterExit is defined and RemainAfterExit == 'yes' %}
+RemainAfterExit={{ RemainAfterExit }}
+{% endif %}
+{% if PIDFile is defined and PIDFile != '' %}
+PIDFile={{ PIDFile }}
+{% endif %}
+ExecStart={{ ExecStart | mandatory }}
+{% if ExecStartPre is defined and ExecStartPre != '' %}
+ExecStartPre={{ ExecStartPre }}
+{% endif %}
+{% if ExecStartPost is defined and ExecStartPost != '' %}
+ExecStartPost={{ ExecStartPost }}
+{% endif %}
+{% if ExecReload is not defined or ExecReload == '' %}
+{% if Type != 'oneshot' %}
+ExecReload=/bin/kill -HUP $MAINPID
+{% endif %}
+{% else %}
+ExecReload={{ ExecReload }}
+{% endif %}
+{% if ExecStop is defined and ExecStop != '' %}
+ExecStop={{ ExecStop }}
+KillMode=process
+{% endif %}
+{% if Restart is defined and Restart != '' %}
+Restart={{ Restart }}
+{% if RestartSec is defined and RestartSec != '' %}
+RestartSec={{ RestartSec }}
+{% endif %}
+{% endif %}
+{% if User is defined and User != '' %}
+User={{ User }}
+{% endif %}
+{% if Group is defined and Group != '' %}
+Group={{ Group }}
+{% endif %}
+{% if EnvironmentFile is defined and EnvironmentFile != '' %}
+EnvironmentFile={{ EnvironmentFile }}
+{% endif %}
+
+[Install]
+WantedBy=muli-User.target
