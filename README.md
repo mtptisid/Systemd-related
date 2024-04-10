@@ -20,5 +20,5 @@ Please go through the systemd once before starting
 
 1. Open AWX web interface and login with user with role System Administator(admin)
 2. Go to Project section and click on Add button to add new project.
-![Project Creation in AWX]()
+![Project Creation in AWX](https://github.com/mtptisid/Systemd-related/blob/master/Screenshot%202024-04-10%20171031.png)
 3. 
