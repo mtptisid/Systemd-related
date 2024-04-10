@@ -1,0 +1,10 @@
+---
+# tasks file for add_cagip_prod_systemd_service
+#
+
+- name: Call linux conf if the host is linux
+  include_tasks: linuxtask.yml
+  when: ansible_system == "Linux"
+  tags:
+    - linux
+
