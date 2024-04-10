@@ -6,6 +6,9 @@
 # when: ansible_distribution == 'RedHat' and ansible_distribution_major_version == '7'
 # when: ansible_distribution == 'CentOS' and ansible_distribution_major_version == '7'
 # when: ansible_distribution == 'Debian' and ansible_distribution_major_version == '6'
+- name: Debug Facts in linux.yml
+  debug:
+    var: ansible_distribution
 
 - name: Ensure that the target OS is RHEL7 or later
   assert:
