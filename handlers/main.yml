@@ -1,6 +1,8 @@
 ---
-# handlers file for sytemd service
-- name: Reload systemd
-  systemd:
-    daemon_reload: yes
-  become: true
+handlers:
+  - name: Reload systemd
+    systemd:
+      name: "{{ ServiceName }}.service"
+      state: reloaded
+    become: true
+
