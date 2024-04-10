@@ -5,7 +5,12 @@
   connection: local
   gather_facts: yes
 
+  
+
   tasks:
+    - name: Debug Facts
+      debug:
+        var: ansible_distribution
     - name: add hosts from extra-vars
       add_host:
         name: '{{ item }}'
