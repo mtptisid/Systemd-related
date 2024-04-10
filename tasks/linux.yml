@@ -37,8 +37,8 @@
         group: root
         mode: 0644
       become: true
-      #notify:
-        #- Reload systemd
+      notify:
+        - Reload systemd
     - meta: flush_handlers
     - name: Enable the service
       systemd:
