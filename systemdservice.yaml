@@ -26,6 +26,5 @@
       when: play_roles_debug | default(false) | bool
 
     - name: Include self role
-      include_role:
-        name: tasks/linux.yml
+      include_tasks: tasks/linux.yml
 
